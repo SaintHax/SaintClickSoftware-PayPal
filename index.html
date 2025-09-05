@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SaintClick Software</title>
+  <meta name="description" content="Página oficial de pago de SaintClick Software" />
+  <style>
+    :root{
+      --bg:#0b0b12;
+      --card:#111322;
+      --text:#e8e9ef;
+      --muted:#a7a9be;
+      --accent:#8a2be2;
+      --accent2:#ff8c00;
+      --btn:#1f2240;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 70% -10%, rgba(138,43,226,.25), transparent 60%),
+                  radial-gradient(800px 400px at 10% 110%, rgba(255,140,0,.20), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      min-height:100dvh;
+      display:flex;align-items:center;justify-content:center;
+      padding:32px;
+    }
+    .wrap{width:100%;max-width:640px;}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:20px;
+      padding:28px;
+      box-shadow:0 10px 30px rgba(0,0,0,.35), inset 0 0 40px rgba(138,43,226,.08);
+      backdrop-filter: blur(6px);
+    }
+    .logo{
+      display:block;width:140px;height:auto;margin:0 auto 12px;
+      filter: drop-shadow(0 4px 14px rgba(138,43,226,.55)) drop-shadow(0 0 20px rgba(255,140,0,.35));
+    }
+    h1{text-align:center;margin:6px 0 16px 0;font-weight:800;letter-spacing:.3px}
+    p.lead{color:var(--muted);text-align:center;margin:0 0 18px 0}
+    .grid{display:grid;grid-template-columns:1fr;gap:12px}
+    @media (min-width:560px){.grid{grid-template-columns:repeat(3,1fr)}}
+    .plan{
+      background:var(--card);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:16px;
+      padding:16px;text-align:center;
+      box-shadow: 0 8px 20px rgba(0,0,0,.25);
+    }
+    .plan h3{margin:0 0 6px 0;font-size:1.05rem}
+    .price{
+      font-size:1.6rem; /* tipografía más grande como en la primera */
+      font-weight:800;
+      margin:6px 0 14px 0;
+      letter-spacing:.2px;
+    }
+    .btn{
+      display:inline-block;width:100%;padding:12px 14px;border-radius:12px;
+      text-decoration:none;text-align:center;font-weight:700;letter-spacing:.2px;
+      background:
+        radial-gradient(80% 120% at 10% 0%, rgba(138,43,226,.50), transparent 50%),
+        radial-gradient(80% 120% at 90% 100%, rgba(255,140,0,.45), transparent 50%),
+        var(--btn);
+      color:#fff;border:1px solid rgba(255,255,255,.14);
+      transition: transform .08s ease, box-shadow .2s ease, filter .2s ease;
+      box-shadow:0 6px 16px rgba(0,0,0,.25);
+    }
+    .btn:hover{transform:translateY(-1px); box-shadow:0 10px 24px rgba(0,0,0,.35); filter:brightness(1.03)}
+    .email-note{margin-top:12px;text-align:center;color:var(--muted);font-size:.95rem}
+    .foot{margin-top:14px;text-align:center;color:var(--muted);font-size:.9rem}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <img class="logo" src="SaintClick.png" alt="SaintClick Software logo" />
+      <h1>SaintClick Software</h1>
+      <p class="lead">Elige tu plan y paga de forma segura con PayPal.</p>
+
+      <div class="grid">
+        <div class="plan">
+          <h3>1 Mes</h3>
+          <div class="price">$40</div>
+          <a class="btn" href="https://paypal.me/SaintClickSoftware/40USD" target="_blank" rel="noopener">Pagar 1 Mes</a>
+        </div>
+        <div class="plan">
+          <h3>6 Meses</h3>
+          <div class="price">$180</div>
+          <a class="btn" href="https://paypal.me/SaintClickSoftware/180USD" target="_blank" rel="noopener">Pagar 6 Meses</a>
+        </div>
+        <div class="plan">
+          <h3>12 Meses</h3>
+          <div class="price">$300</div>
+          <a class="btn" href="https://paypal.me/SaintClickSoftware/300USD" target="_blank" rel="noopener">Pagar 12 Meses</a>
+        </div>
+      </div>
+
+      <p class="email-note">Tras el pago recibirás el recibo de PayPal en tu correo.</p>
+      <div class="foot">© <span id="y"></span> SaintClick Software</div>
+    </div>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
